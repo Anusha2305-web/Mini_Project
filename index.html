@@ -1,0 +1,20 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task List</title>
+</head>
+<body>
+  <h1>Task List</h1>
+  {% if tasks %}
+    <ul>
+      {% for task in tasks %}
+        <li>{{ task.name }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No tasks found.</p>
+  {% endif %}
+</body>
+</html>
